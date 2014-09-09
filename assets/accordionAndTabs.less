@@ -1,0 +1,91 @@
+.ipWidget-AccordionAndTabs{
+  @accordionLightColor: #dedede;
+  &.ipSkin-default>._accordion{
+    >dt{
+      background: @accordionLightColor;
+      padding: 10px;
+      border-bottom: 0;
+      &:last-of-type {
+        border-bottom: 1px solid @accordionLightColor;
+      }
+      >a {
+        display: block;
+        color: #ffffff;
+        font-weight: bold;
+        >span{
+          color: inherit;
+        }
+      }
+    }
+    >dd {
+      border: 1px solid @accordionLightColor;
+
+      border-top: 0;
+      font-size: 12px;
+      padding: 0;
+      overflow: hidden;
+      max-height: 0;
+      -webkit-transition: max-height 0.5s ease;
+      -moz-transition: max-height 0.5s ease;
+      transition: max-height 0.5s ease;
+      &.current{
+        padding: 10px;
+        max-height: 1000px;
+        -webkit-transition: max-height 0.5s ease;
+        -moz-transition: max-height 0.5s ease;
+        transition: max-height 0.5s ease;
+      }
+      &:last-of-type {
+        border-top: 1px solid white;
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+  &.ipSkin-tabs{
+    ._tabs-menu{
+      >dt{
+        display: block;
+        float: left;
+        margin-right: 10px;
+
+        background-color: #ccc;
+        border-top: 1px solid #d4d4d1;
+        border-right: 1px solid #d4d4d1;
+        border-left: 1px solid #d4d4d1;
+        > a {
+          display: inline;
+          padding: 0 10px;
+          line-height: 30px;
+          color: #ffffff;
+        }
+        &.current {
+          background-color: #fff;
+          border-bottom: 1px solid #fff;
+          overflow: hidden;
+        }
+      }
+    }
+
+    >._tabs{
+      clear: both;
+      border: 1px solid @accordionLightColor;
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 10px;
+      ._tab{
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: max-height 0.5s ease 0s;
+        -moz-transition: max-height 0.5s ease 0s;
+        transition: max-height 0.5s ease 0s;
+        &.current{
+          max-height: 1000px;
+          -webkit-transition: max-height 0.5s ease 0.5s;
+          -moz-transition: max-height 0.5s ease 0.5s;
+          transition: max-height 0.5s ease 0.5s;
+        }
+      }
+    }
+  }
+}
